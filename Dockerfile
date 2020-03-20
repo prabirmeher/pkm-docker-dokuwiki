@@ -17,5 +17,6 @@ RUN tar xzf /dokuwiki/dokuwiki-stable.tgz  --strip-components=1 -C /var/www/html
     chmod +x /entrypoint.sh
 
 EXPOSE 80
+VOLUME [ "/var/www/html/data/","/var/www/html/conf/","/var/www/html/lib/","/var/log/httpd/" ]
 
 ENTRYPOINT ["/entrypoint.sh"]
